@@ -41,6 +41,7 @@ import {
   PerspectiveCoralEventListener,
   SlackCoralEventListener,
   SubscriptionCoralEventListener,
+  ViewersCoralEventListener,
   WebhookCoralEventListener,
 } from "./events/listeners";
 import CoralEventListenerBroker from "./events/publisher";
@@ -221,6 +222,7 @@ class Server {
     this.broker.register(new NotifierCoralEventListener(this.tasks.notifier));
     this.broker.register(new SlackCoralEventListener());
     this.broker.register(new SubscriptionCoralEventListener());
+    this.broker.register(new ViewersCoralEventListener());
     this.broker.register(new WebhookCoralEventListener(this.tasks.webhook));
     this.broker.register(new PerspectiveCoralEventListener());
 

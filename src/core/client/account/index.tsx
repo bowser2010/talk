@@ -19,6 +19,7 @@ async function main() {
   const ManagedCoralContextProvider = await createManaged({
     initLocalState,
     localesData,
+    bundle: "account",
   });
 
   const Index: FunctionComponent = () => (

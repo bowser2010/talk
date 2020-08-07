@@ -29,6 +29,7 @@ import { GiphyMediaConfiguration } from "./GiphyMediaConfiguration";
 import { GoogleAuthIntegration } from "./GoogleAuthIntegration";
 import { Invite } from "./Invite";
 import { LiveConfiguration } from "./LiveConfiguration";
+import { LiveStoryViewersUpdatePayload } from "./LiveStoryViewersUpdatePayload";
 import { MediaConfiguration } from "./MediaConfiguration";
 import { ModerationQueue } from "./ModerationQueue";
 import { ModerationQueues } from "./ModerationQueues";
@@ -90,6 +91,7 @@ const Resolvers: GQLResolver = {
   GoogleAuthIntegration,
   Invite,
   LiveConfiguration,
+  LiveStoryViewersUpdatePayload,
   Locale,
   MediaConfiguration,
   ModerationQueue,

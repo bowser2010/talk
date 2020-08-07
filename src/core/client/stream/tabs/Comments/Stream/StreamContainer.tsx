@@ -49,6 +49,7 @@ import StoryClosedTimeoutContainer from "./StoryClosedTimeout";
 import { SuspendedInfoContainer } from "./SuspendedInfo/index";
 import UnansweredCommentsTab from "./UnansweredCommentsTab";
 import useCommentCountEvent from "./useCommentCountEvent";
+import ViewersWatchingContainer from "./ViewersWatchingContainer";
 
 import styles from "./StreamContainer.css";
 
@@ -211,6 +212,10 @@ export const StreamContainer: FunctionComponent<Props> = (props) => {
             settings={props.settings}
           />
         )}
+        <ViewersWatchingContainer
+          story={props.story}
+          settings={props.settings}
+        />
         <HorizontalGutter spacing={4} className={styles.tabBarContainer}>
           <Flex
             direction="row"
@@ -400,6 +405,7 @@ const enhanced = withFragmentContainer<Props>({
       ...CreateCommentReplyMutation_story
       ...CreateCommentMutation_story
       ...ModerateStreamContainer_story
+      ...ViewersWatchingContainer_story
       id
       url
       settings {
@@ -439,6 +445,7 @@ const enhanced = withFragmentContainer<Props>({
       ...SuspendedInfoContainer_settings
       ...AnnouncementContainer_settings
       ...ModerateStreamContainer_settings
+      ...ViewersWatchingContainer_settings
     }
   `,
 })(StreamContainer);
