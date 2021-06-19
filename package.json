@@ -248,7 +248,7 @@
     "@types/stack-trace": "0.0.29",
     "@types/stack-utils": "^1.0.1",
     "@types/uuid": "^7.0.2",
-    "@types/verror": "^1.10.3",
+    "@types/verror": "^1.10.4",
     "@types/vinyl": "^2.0.4",
     "@types/webpack": "^4.41.17",
     "@types/webpack-assets-manifest": "^3.0.1",
